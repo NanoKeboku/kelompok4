@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.toggle {
+  font-family: Josefin sans;
+}
+
+.left {
+  width: auto;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  cursor: pointer;
+}
+
+.logo h1 {
+  padding-left: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.nav-block {
+  display: flex;
+  width: auto;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-block:hover {
+  color: white;
+  background: #84bcff;
+  cursor: pointer;
+}
+
+.nav-block i,
+.keluar i,
+.nav-block p {
+  color: #5c5c5c;
+  padding-right: 20px;
+  width: 10px;
+}
+
+.text-i {
+  display: flex;
+  flex-direction: row;
+}
+
+#arrow {
+  position: relative;
+  display: flex;
+}
+
+.nav-block:hover > .text-i i,
+.nav-block:hover > .text-i p {
+  color: white;
+}
+
+.keluar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  cursor: pointer;
+  color: #5c5c5c;
+}
+
+.keluar:hover,
+.keluar:hover > i {
+  color: black;
+}
+
+.toggle {
+  display: none;
+}
+.toggle.on {
+  display: flex;
+}
+
+#arrow {
+  display: none;
+}
+
+.left:hover > .toggle {
+  display: flex;
+}
+
+.tugas {
+  color: white;
+  background: #84bcff;
+  cursor: pointer;
+}
+
+.tugas .text-i i,
+.tugas p {
+  color: white;
+}
+
+/* --------------Right Side-------------------- */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.title h1 {
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title p {
+  color: #5a5848;
+  font-family: Josefin Sans;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.title p span {
+  color: #000;
+  font-family: Josefin Sans;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.bell {
+  width: 42px;
+  height: 42px;
+  background-color: #ffefef;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.notif-bar {
+  display: flex;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  color: white;
+  right: 90px;
+  top: 25px;
+  display: none;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.notif-bar::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background: #000;
+}
+
+.nav-notif {
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.text-notif {
+  font-family: Josefin sans;
+  font-weight: 600;
+}
+
+.notif-bar.on {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.hero {
+  min-width: 959px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: rgba(252, 255, 126, 0.84);
+}
+
+.content-hero {
+  width: 459px;
+  height: 130px;
+  position: relative;
+  left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content-hero h1 {
+  color: #000;
+  font-family: ABeeZee;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content-hero p {
+  color: #5c5c5c;
+  font-family: ABeeZee;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero img {
+  position: relative;
+  right: 100px;
+  width: 346px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 959px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.latest {
+  width: 100%;
+  height: 60px;
+}
+
+.latest p {
+  color: #253a52;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.card-block {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin-right: 50px;
+  cursor: pointer;
+}
+.conta {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.kr {
+  width: 70%;
+  margin-left: 33px;
+  margin-top: 49px;
+}
+.knn {
+  width: 307px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 45px;
+  gap: 20px;
+}
+
+.knn img {
+  cursor: pointer;
+}
+
+.catas {
+  width: 693px;
+  display: flex;
+}
+
+#hitam {
+  width: 37px;
+}
+
+#hitam a {
+  color: black;
+  font-weight: 800;
+}
+
+.grey a {
+  color: #5a5848;
+}
+
+.grey a:hover {
+  color: black;
+  font-weight: 800;
+}
+
+.atas {
+  color: #a3a3a3;
+  height: 24px;
+  width: 150px;
+  font-family: Josefin Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 23px;
+}
+
+.ckls {
+  width: 693px;
+}
+
+.klss {
+  width: 800px;
+  height: 87px;
+  flex-shrink: 0;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: white;
+  margin-top: 30px;
+  color: black;
+  display: flex;
+  cursor: pointer;
+  color: black;
+  justify-content: space-between;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.ksatuu {
+  width: 85px;
+  height: 87px;
+  width: 54px;
+  height: 45px;
+  flex-shrink: 0;
+  color: black;
+  font-family: Josefin Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.fsatuu {
+  color: blfack;
+  font-family: Josefin Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.fduau {
+  color: black;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.fduaau {
+  color: black;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.break {
+  display: flex;
+}
+
+.klss:hover,
+.klss:hover > .break .ksatuu p,
+.klss:hover > .kdua p,
+.klss:hover > .break .kdua p {
+  color: white;
+  background-color: #84bcff;
+  border: none;
+}
+
+.klss:hover {
+  box-shadow: 5px 5px 0px 1px black;
+}
